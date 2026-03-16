@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Rounded square background -->
+  <rect width="32" height="32" rx="7" fill="#2D4A3E"/>
+  <!-- Tree: upper crown -->
+  <polygon points="16,3 26,15 6,15" fill="#C8A04A"/>
+  <!-- Tree: lower crown (wider, overlapping) -->
+  <polygon points="16,9 27,22 5,22" fill="#C8A04A"/>
+  <!-- Trunk -->
+  <rect x="13.5" y="22" width="5" height="6" rx="1.5" fill="#C8A04A"/>
+</svg>
