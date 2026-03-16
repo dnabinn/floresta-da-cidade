@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floresta da Cidade — Restaurante · Bairro Alto, Lisboa</title>
+  <meta name="description" content="Floresta da Cidade — Cozinha Tradicional Portuguesa no coração do Bairro Alto, Lisboa. Esplanada, ambiente acolhedor. Reserve já a sua mesa.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#inicio" class="nav__logo">
+        <span class="nav__logo-text">Floresta da Cidade</span>
+        <span class="nav__logo-sub">Bairro Alto · Lisboa</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#ementa">Ementa</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="inicio">
+
+    <!-- Slides -->
+    <div class="hero__slides">
+      <div class="hero__slide active">
+        <img src="images/hero slider.webp" alt="Peixe grelhado fresco na esplanada">
+      </div>
+      <div class="hero__slide">
+        <img src="images/hero slider 2.webp" alt="Chef a preparar bacalhau">
+      </div>
+      <div class="hero__slide">
+        <img src="images/hero slider 3.webp" alt="Pratos tradicionais portugueses">
+      </div>
+    </div>
+
+    <div class="hero__overlay"></div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <p class="hero__pre" data-animate>Autêntica Cozinha Portuguesa</p>
+      <h1 class="hero__title" data-animate data-delay="1">Floresta<br>da Cidade</h1>
+      <p class="hero__sub" data-animate data-delay="2">Um recanto acolhedor no coração do Bairro Alto</p>
+      <div class="hero__ctas" data-animate data-delay="3">
+        <a href="#ementa" class="btn btn--primary">Ver Ementa</a>
+        <a href="#reservas" class="btn btn--outline">Reservar Mesa</a>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button class="hero__arrow hero__arrow--prev" aria-label="Slide anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero__arrow hero__arrow--next" aria-label="Próximo slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- Dots -->
+    <div class="hero__dots">
+      <button class="hero__dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Counter -->
+    <div class="hero__counter"><strong>01</strong> / 03</div>
+
+    <!-- Progress -->
+    <div class="hero__progress" id="heroProgress"></div>
+
+    <a href="#info" class="hero__scroll" aria-label="Scroll para baixo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       INFO STRIP
+       ============================================================ -->
+  <div class="info-strip" id="info">
+    <div class="container info-strip__inner">
+
+      <div class="info-strip__item">
+        <svg class="info-strip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <div>
+          <strong>Morada</strong>
+          <span>Tv. do Poço da Cidade 10, 1200-334 Lisboa</span>
+        </div>
+      </div>
+
+      <div class="info-strip__divider"></div>
+
+      <div class="info-strip__item">
+        <svg class="info-strip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <div>
+          <strong>Horário</strong>
+          <span>Todos os dias · 12h00 – 00h00</span>
+        </div>
+      </div>
+
+      <div class="info-strip__divider"></div>
+
+      <div class="info-strip__item">
+        <svg class="info-strip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.9 2.18 2 2 0 012.88.02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <div>
+          <strong>Telefone</strong>
+          <span><a href="tel:+351213461956">21 346 1956</a></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SOBRE
+       ============================================================ -->
+  <section class="sobre section" id="sobre">
+    <div class="container sobre__inner">
+
+      <div class="sobre__image" data-animate="left">
+        <img src="images/unnamed (3).webp" alt="Interior acolhedor do Floresta da Cidade" loading="lazy">
+        <div class="sobre__badge">
+          <span>Bairro Alto</span>
+          <span>Lisboa</span>
+        </div>
+      </div>
+
+      <div class="sobre__text" data-animate="right">
+        <p class="section__label">Sobre Nós</p>
+        <h2 class="section__title">Um Sabor de Portugal<br>no Coração de Lisboa</h2>
+        <p>No histórico <strong>Bairro Alto</strong>, na encantadora Travessa do Poço da Cidade, a <strong>Floresta da Cidade</strong> é um refúgio de sabores genuinamente portugueses. Aqui, a tradição não é apenas uma palavra — é a essência de cada prato que sai da nossa cozinha.</p>
+        <p>Preparamos receitas autênticas com produtos regionais frescos, num ambiente descontraído e acolhedor onde todos são bem-vindos. Da refeição de almoço ao jantar tardio, a nossa esplanada e o nosso espaço interior convidam a ficar.</p>
+        <p>A poucos passos do Metro Baixa-Chiado, somos o destino certo para quem procura cozinha portuguesa de qualidade no coração de Lisboa.</p>
+
+        <div class="sobre__badges">
+          <div class="sobre__tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Cozinha Tradicional
+          </div>
+          <div class="sobre__tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8C8 10 5.9 16.17 3.82 19.5M2 21h13c3 0 7-2 7-7-3 0-6.23-.77-8.4-2.87"/><path d="M2 21c2-6 6-8 14-8"/></svg>
+            Esplanada
+          </div>
+          <div class="sobre__tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Aberto até à meia-noite
+          </div>
+          <div class="sobre__tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            Grupos Bem-vindos
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HIGHLIGHTS
+       ============================================================ -->
+  <section class="highlights section">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <p class="section__label">Porquê Escolher-nos</p>
+        <h2 class="section__title">A Nossa Proposta</h2>
+      </div>
+
+      <div class="highlights__grid">
+
+        <div class="highlight-card" data-animate data-delay="1">
+          <div class="highlight-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 010 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/>
+              <line x1="10" y1="1" x2="10" y2="4"/>
+              <line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3>Cozinha Tradicional</h3>
+          <p>Receitas genuínas da gastronomia portuguesa com ingredientes frescos e produtos regionais de qualidade, preparadas com todo o cuidado.</p>
+        </div>
+
+        <div class="highlight-card" data-animate data-delay="2">
+          <div class="highlight-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8C8 10 5.9 16.17 3.82 19.5M2 21h13c3 0 7-2 7-7-3 0-6.23-.77-8.4-2.87"/>
+              <path d="M2 21c2-6 6-8 14-8"/>
+            </svg>
+          </div>
+          <h3>Esplanada Acolhedora</h3>
+          <p>Desfrute da atmosfera única do Bairro Alto na nossa esplanada — o lugar perfeito para um almoço ao sol ou um jantar ao ar livre.</p>
+        </div>
+
+        <div class="highlight-card" data-animate data-delay="3">
+          <div class="highlight-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <h3>No Coração de Lisboa</h3>
+          <p>Situados na encantadora Travessa do Poço da Cidade, a apenas 256 metros do Metro Baixa-Chiado e rodeados pelas melhores atrações de Lisboa.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EMENTA
+       ============================================================ -->
+  <section class="ementa section" id="ementa">
+    <div class="container">
+      <div class="section__header" data-animate>
+        <p class="section__label">O Que Servimos</p>
+        <h2 class="section__title">A Nossa Ementa</h2>
+        <p class="section__sub">Sabores genuínos da tradição portuguesa</p>
+      </div>
+
+      <div class="ementa__tabs" data-animate data-delay="1">
+        <button class="ementa__tab active" data-tab="entradas">Entradas</button>
+        <button class="ementa__tab" data-tab="sopas">Sopas</button>
+        <button class="ementa__tab" data-tab="pratos">Pratos</button>
+        <button class="ementa__tab" data-tab="sobremesas">Sobremesas</button>
+        <button class="ementa__tab" data-tab="bebidas">Bebidas</button>
+      </div>
+
+      <!-- ENTRADAS -->
+      <div class="ementa__panel active" id="tab-entradas">
+        <div class="ementa__grid">
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Pão da Casa com Manteiga de Alho</h4>
+              <p>Pão artesanal com manteiga de alho e ervas aromáticas</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Chouriço Assado na Brasa</h4>
+              <p>Chouriço alentejano grelhado na brasa com broa</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Pataniscas de Bacalhau</h4>
+              <p>Pataniscas tradicionais com arroz de feijão</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Polvo à Lagareiro</h4>
+              <p>Polvo grelhado com azeite, alho e batata a murro</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Tábua de Petiscos</h4>
+              <p>Seleção de queijos, presunto, enchidos e azeitonas</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Camarão Grelhado</h4>
+              <p>Camarão fresco grelhado com manteiga de limão e coentros</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOPAS -->
+      <div class="ementa__panel" id="tab-sopas">
+        <div class="ementa__grid">
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Caldo Verde</h4>
+              <p>Sopa tradicional de couve com chouriço e batata</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Sopa do Dia</h4>
+              <p>Sopa caseira confecionada com produtos frescos da época</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Açorda à Alentejana</h4>
+              <p>Açorda tradicional com pão alentejano, ovo e coentros</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Sopa de Marisco</h4>
+              <p>Caldo rico de marisco com croutons de broa e coentros</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRATOS -->
+      <div class="ementa__panel" id="tab-pratos">
+        <div class="ementa__grid">
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Bacalhau à Brás</h4>
+              <p>Bacalhau desfiado com batata palha, ovos mexidos e azeitonas</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Bacalhau com Broa e Legumes</h4>
+              <p>Lombo de bacalhau com crosta de broa, batata e legumes salteados</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Polvo Grelhado</h4>
+              <p>Polvo grelhado com batata a murro, pimentos e azeite virgem</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Tamboril à Pescador</h4>
+              <p>Tamboril em molho de tomate, coentros e ameijoas</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Bife na Pedra</h4>
+              <p>Bife de novilho grelhado na pedra com batatas fritas e salada</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Secretos de Porco com Migas</h4>
+              <p>Secretos ibéricos com migas alentejanas e legumes grelhados</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Frango no Churrasco</h4>
+              <p>Meio frango marinado e assado no churrasco com piri-piri</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Arroz de Pato à Portuguesa</h4>
+              <p>Arroz de pato confitado com chouriço, gratinado no forno</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBREMESAS -->
+      <div class="ementa__panel" id="tab-sobremesas">
+        <div class="ementa__grid">
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Bolo de Chocolate</h4>
+              <p>Bolo de chocolate húmido com sorvete de baunilha</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Cheesecake de Frutos Vermelhos</h4>
+              <p>Cheesecake cremoso com coulis de morango e framboesa</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Leite-Creme Queimado</h4>
+              <p>Clássico leite-creme português com caramelo crocante</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Arroz Doce</h4>
+              <p>Arroz doce tradicional com canela e raspa de laranja</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Mousse de Chocolate</h4>
+              <p>Mousse aerada de chocolate negro com chantilly</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Tarte de Amêndoa</h4>
+              <p>Tarte alentejana de amêndoa com mel e sorvete de baunilha</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEBIDAS -->
+      <div class="ementa__panel" id="tab-bebidas">
+        <div class="ementa__grid">
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Vinho Tinto da Casa (copo)</h4>
+              <p>Vinho tinto regional português</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Vinho Branco da Casa (copo)</h4>
+              <p>Vinho branco regional português</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Sangria (jarro)</h4>
+              <p>Sangria da casa com fruta fresca da época</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Cerveja</h4>
+              <p>Nacional ou importada, pressão ou garrafa</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Sumos Naturais</h4>
+              <p>Laranja, maçã, manga ou mistura da época</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+          <div class="ementa__item">
+            <div class="ementa__item-info">
+              <h4>Água (garrafa)</h4>
+              <p>Com ou sem gás</p>
+            </div>
+            <span class="ementa__price">— €</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALERIA
+       ============================================================ -->
+  <section class="galeria section" id="galeria">
+    <div class="galeria section__header" data-animate>
+      <p class="section__label">Galeria</p>
+      <h2 class="section__title">Momentos no Floresta</h2>
+    </div>
+
+    <div class="gallery__grid" data-animate data-delay="1">
+      <div class="gallery__item">
+        <img src="images/unnamed (1).webp" alt="Prato flambado no Floresta da Cidade" loading="lazy">
+        <div class="gallery__caption">O nosso espaço</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed.webp" alt="Tábua de petiscos e camarão" loading="lazy">
+        <div class="gallery__caption">Petiscos</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (6).webp" alt="Polvo grelhado na esplanada" loading="lazy">
+        <div class="gallery__caption">Polvo grelhado</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (4).webp" alt="Frango grelhado com vinho" loading="lazy">
+        <div class="gallery__caption">Pratos da grelha</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (7).webp" alt="Noite de fado no restaurante" loading="lazy">
+        <div class="gallery__caption">Noites de Fado</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (8).webp" alt="Guitarrista de fado" loading="lazy">
+        <div class="gallery__caption">Música ao vivo</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (9).webp" alt="Mesa com ameijoas e bebidas" loading="lazy">
+        <div class="gallery__caption">Momentos à mesa</div>
+      </div>
+      <div class="gallery__item">
+        <img src="images/unnamed (2).webp" alt="Sala de jantar do restaurante" loading="lazy">
+        <div class="gallery__caption">Sala de jantar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESERVAS
+       ============================================================ -->
+  <section class="reservas" id="reservas">
+    <div class="reservas__overlay"></div>
+    <div class="reservas__content" data-animate>
+      <p class="section__label section__label--light">Reserve Já</p>
+      <h2 class="reservas__title">Reserve a Sua Mesa</h2>
+      <p class="reservas__sub">Garanta o seu lugar e venha desfrutar de uma experiência gastronómica inesquecível no coração do Bairro Alto.</p>
+      <div class="reservas__ctas">
+        <a href="tel:+351213461956" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.9 2.18 2 2 0 012.88.02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          21 346 1956
+        </a>
+        <a href="mailto:ze.sandra@live.com.pt" class="btn btn--outline-light">Enviar Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO + HORÁRIO
+       ============================================================ -->
+  <section class="contacto section" id="contacto">
+    <div class="container contacto__inner">
+
+      <div class="contacto__horario" data-animate="left">
+        <p class="section__label">Horário</p>
+        <h2 class="section__title">Quando Estamos Abertos</h2>
+        <table class="horario__table">
+          <tbody>
+            <tr>
+              <td>Segunda-feira</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+            <tr>
+              <td>Terça-feira</td>
+              <td>11h00 – 00h00</td>
+            </tr>
+            <tr>
+              <td>Quarta-feira</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+            <tr>
+              <td>Quinta-feira</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+            <tr class="horario__highlight">
+              <td>Sexta-feira</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+            <tr class="horario__highlight">
+              <td>Sábado</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+            <tr>
+              <td>Domingo</td>
+              <td>12h00 – 00h00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="contacto__info" data-animate="right">
+        <p class="section__label">Contacto</p>
+        <h2 class="section__title">Fale Connosco</h2>
+        <ul class="contacto__list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Tv. do Poço da Cidade 10, 1200-334 Lisboa<br><small>Bairro Alto · Metro Baixa-Chiado (256m)</small></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.9 2.18 2 2 0 012.88.02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <a href="tel:+351213461956">21 346 1956</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:ze.sandra@live.com.pt">ze.sandra@live.com.pt</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Todos os dias · 12h00 – 00h00</span>
+          </li>
+        </ul>
+
+        <div class="contacto__social">
+          <a href="https://www.facebook.com/restaurante.bairro.alto.fdc" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAPA
+       ============================================================ -->
+  <section class="mapa">
+    <iframe
+      src="https://maps.google.com/maps?q=Tv.+do+Po%C3%A7o+da+Cidade+10%2C+1200-334+Lisboa%2C+Portugal&output=embed&z=17&hl=pt"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Floresta da Cidade — Localização no Mapa"
+    ></iframe>
+  </section>
+
+  <!-- ============================================================
+       FLOATING ACTION BUTTON
+       ============================================================ -->
+  <div class="fab" id="fab">
+    <div class="fab__options">
+      <!-- Reserve a table -->
+      <a href="#reservas" class="fab__option" aria-label="Reservar mesa">
+        <span class="fab__option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        </span>
+        <span class="fab__option-label">Reservar Mesa</span>
+      </a>
+      <!-- Call the restaurant -->
+      <a href="tel:+351213461956" class="fab__option" aria-label="Ligar para o restaurante">
+        <span class="fab__option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </span>
+        <span class="fab__option-label">21 346 1956</span>
+      </a>
+    </div>
+    <!-- Toggle button -->
+    <button class="fab__main" id="fabToggle" aria-label="Abrir opções" aria-expanded="false">
+      <svg class="fab__icon-default" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
+      <svg class="fab__icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 17.59 13.41 12z"/></svg>
+    </button>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <p class="footer__logo">Floresta da Cidade</p>
+        <p class="footer__tagline">Cozinha Tradicional Portuguesa<br>no coração do Bairro Alto, Lisboa</p>
+        <p class="footer__copy">© 2024 Floresta da Cidade.<br>Todos os direitos reservados.</p>
+      </div>
+
+      <div class="footer__nav">
+        <p class="footer__heading">Navegação</p>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#ementa">Ementa</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="footer__heading">Contacto</p>
+        <p>Tv. do Poço da Cidade 10<br>1200-334 Lisboa</p>
+        <a href="tel:+351213461956">21 346 1956</a>
+        <a href="mailto:ze.sandra@live.com.pt">ze.sandra@live.com.pt</a>
+        <a href="https://www.facebook.com/restaurante.bairro.alto.fdc" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+    </div>
+    <div class="footer__bottom">
+      Tv. do Poço da Cidade 10 · 1200-334 Lisboa · Portugal
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // NAV — scroll state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // NAV — hamburger
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // EMENTA — tabs
+    document.querySelectorAll('.ementa__tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.ementa__tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.ementa__panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // SCROLL ANIMATIONS — IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // ============================================================
+    // HERO SLIDER
+    // ============================================================
+    (function () {
+      const slides   = document.querySelectorAll('.hero__slide');
+      const dots     = document.querySelectorAll('.hero__dot');
+      const progress = document.getElementById('heroProgress');
+      const counter  = document.querySelector('.hero__counter');
+      const DURATION = 6000; // ms per slide
+      let current = 0;
+      let timer;
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+      function goTo(n) {
+        // Remove active from old slide
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+
+        // Restart Ken Burns on incoming slide
+        const incoming = slides[n];
+        const img = incoming.querySelector('img');
+        img.style.animation = 'none';
+        incoming.offsetHeight; // force reflow
+        img.style.animation = '';
+
+        current = n;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+
+        // Update counter
+        if (counter) counter.innerHTML = '<strong>' + pad(current + 1) + '</strong> / ' + pad(slides.length);
+
+        // Restart progress bar
+        if (progress) {
+          progress.classList.remove('running');
+          progress.style.transition = 'none';
+          progress.style.width = '0%';
+          progress.offsetHeight; // reflow
+          progress.classList.add('running');
+        }
+      }
+
+      function next() { goTo((current + 1) % slides.length); }
+      function prev() { goTo((current - 1 + slides.length) % slides.length); }
+
+      function startAutoplay() { timer = setInterval(next, DURATION); }
+      function resetAutoplay()  { clearInterval(timer); startAutoplay(); }
+
+      // Arrow buttons
+      document.querySelector('.hero__arrow--next').addEventListener('click', function () { next(); resetAutoplay(); });
+      document.querySelector('.hero__arrow--prev').addEventListener('click', function () { prev(); resetAutoplay(); });
+
+      // Dot buttons
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { goTo(i); resetAutoplay(); });
+      });
+
+      // Touch / swipe support
+      let touchStartX = 0;
+      const heroEl = document.querySelector('.hero');
+      heroEl.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+      heroEl.addEventListener('touchend',   function (e) {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAutoplay(); }
+      }, { passive: true });
+
+      // Kick off
+      goTo(0);
+      startAutoplay();
+    })();
+
+    // ============================================================
+    // FLOATING ACTION BUTTON (FAB)
+    // ============================================================
+    (function () {
+      const fab       = document.getElementById('fab');
+      const fabToggle = document.getElementById('fabToggle');
+
+      fabToggle.addEventListener('click', function () {
+        const isOpen = fab.classList.toggle('open');
+        fabToggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!fab.contains(e.target)) {
+          fab.classList.remove('open');
+          fabToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close when a Reservar Mesa option is clicked (scrolls to section)
+      fab.querySelectorAll('.fab__option[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          fab.classList.remove('open');
+          fabToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
