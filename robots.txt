@@ -1,5 +1,5 @@
 # robots.txt — Floresta da Cidade
-# https://florestadacidade.pt/robots.txt
+# https://florestadacidade.com/robots.txt
 # Update domain once Hostinger is live.
 
 User-agent: *
@@ -9,4 +9,4 @@ Allow: /
 Disallow: /.claude/
 
 # Sitemap location
-Sitemap: https://florestadacidade.pt/sitemap.xml
+Sitemap: https://florestadacidade.com/sitemap.xml
